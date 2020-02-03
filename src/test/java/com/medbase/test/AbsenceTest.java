@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -20,6 +21,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+
+import dto.TableRow;
 
 public class AbsenceTest {
 
@@ -69,6 +72,18 @@ public class AbsenceTest {
 
 		for (int pageCount = 1; pageCount <= 5; pageCount++) {
 			List<WebElement> results = driver.findElements(By.xpath("//tbody//tr//td"));
+			List<TableRow> tableRows = new ArrayList<TableRow>();
+			for(int j = 1; j <= results.size(); j++) {
+				TableRow row = null;
+				if(j==1 || (j%8==0)) {
+					tableRows.add(row);
+					row = new TableRow();
+				} else {
+					row.setEmployee(results.get(j).getText());
+				}
+				
+			}
+			
 			//for (CSVRecord csvRecord : csvParser) {
 
 				for (int i = 0; i < results.size(); i++) {

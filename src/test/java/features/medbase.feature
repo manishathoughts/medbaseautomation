@@ -5,7 +5,7 @@ Given I have navigated to the AUT
 And I log in with valid Credentilas
 |njF83mf@jN7p.z7B|3K4Mq*S%1ejqV0iu^glcK&o$m4q^D157|
 
-@practical
+@practical1
 Scenario Outline: Update the logged-in-user's details
 	When I navigate to the Logged-In-User's Profile page
 	And I update the work address details
@@ -18,7 +18,7 @@ Examples:
 |Contact-option         |options |
 |All                    |Email   |
 
-@practical
+@practical1
 Scenario: Assert management information report results
 	When I navigate to the Absence Overview page
 	And I set the time window

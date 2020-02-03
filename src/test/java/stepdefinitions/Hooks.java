@@ -9,7 +9,7 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 
-	@Before("@practical")
+	@Before("@practical1")
 	public void openbrowser() throws IOException {
 		DriverUtils.initialize();
 	}

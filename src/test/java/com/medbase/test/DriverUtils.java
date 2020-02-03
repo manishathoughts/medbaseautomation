@@ -36,7 +36,7 @@ public class DriverUtils {
 		
 		driver.manage().window().maximize();
 
-		driver.get(prop.getProperty("URL"));
+		//driver.get(prop.getProperty("URL"));
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
